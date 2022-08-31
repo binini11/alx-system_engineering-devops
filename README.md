@@ -1,1 +1,1 @@
-readme about shell basics repo
+readme about shell absics repo
