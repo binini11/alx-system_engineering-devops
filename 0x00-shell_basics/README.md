@@ -11,3 +11,10 @@
 11-lists lists the files including hiden files in current directry, parent working directory and in the boot directory.
 12-file_type tells file type.
 13-symbolic_link create a symbolic link
+14-copy_html copies all html file except older files in the dir
+100-lets_move moves files the begin with capital letter
+101-clean_emacs removes files created by emacs
+102-tree creates tree like dir
+103-commas lists comma seperated content of current director
+school.mgc majic file that can be used with the file command
+
