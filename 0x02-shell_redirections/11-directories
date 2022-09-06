@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -path . -type d -print | wc -l
+ls -1A | wc -l
