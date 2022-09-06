@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -print | wc -ghjkll
+find . -path . -type d -print | wc -l
