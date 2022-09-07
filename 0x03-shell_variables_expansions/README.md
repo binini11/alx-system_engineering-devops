@@ -23,4 +23,6 @@ oks for a program.
 9-divide_and_rule divide a variable by anothe variable.     
 
 10-love_exponent_breath multiplies a variable by the power of love.
-
+11-binary_to_decimal displas a decimal value of the binary variable.
+12-combinations displays all possible combinations of a-z with out oo.
+13-print_float rints a number with two decimal point.
