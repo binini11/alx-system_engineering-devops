@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-#Bash script that prints the PID
+# Displays the bash pid
 
-echo $$
+echo $BASHPID
