@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Kill a process instead it was trapped 
 
 killing_pid=$(pgrep -f './7-highlander')
