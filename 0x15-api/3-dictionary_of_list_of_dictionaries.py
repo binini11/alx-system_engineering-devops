@@ -5,8 +5,6 @@ import json
 import requests
 import sys
 
-
-
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
     user = '{}users'.format(url)
@@ -25,7 +23,6 @@ if __name__ == "__main__":
                          "task": task.get('title'),
                          "completed": task.get('completed')}
             l_task.append(dict_task)
-
 
         d_task[str(userid)] = l_task
     filename = 'todo_all_employees.json'
