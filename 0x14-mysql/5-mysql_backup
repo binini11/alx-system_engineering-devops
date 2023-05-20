@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script to baskup all MySQL DATABASE withf mysqldump and tar.
-mysqldump -uroot -p"$1" --all-databases > backup.sql
-tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
+# Script that backs up and creat tar file with mysqldump
+mysqldump --all-databases -u root -p"$1" > backup.sql
+tar -czvf "$(date '+%d-%m-%Y').tar.gz" backup.sql
