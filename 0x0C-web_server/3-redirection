@@ -1,29 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Configure your Nginx server to redirect to another page
 
-# Install Nginx
-sudo apt update
-sudo apt install nginx -y
+sudo apt-get update
+sudo apt-get install -y nginx
 
-# Create the server block file
-sudo nano /etc/nginx/sites-available/redirect_me
-
-# Paste the server block configuration into the file
-cat > /etc/nginx/sites-available/redirect_me <<EOF
-server {
+sudo mkdir /etc/nginx/html
+echo "Hello World" > /etc/nginx/html/index.html
+printf %s "server {
     listen 80;
-    server_name youtube.com;
-
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
     location /redirect_me {
-        return 301 https://https://www.youtube.com/watch?v=ZxKM3DCV2kE&list=WL;
+        return 301 https://www.youtube.com/watch?v=ZxKM3DCV2kE&list=WL;
     }
-}
-EOF
+}" > /etc/nginx/sites-enabled/default
 
-# Create a symbolic link to the sites-enabled directory
-sudo ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
-
-# Test the configuration for syntax errors
-sudo nginx -t
-
-# Reload Nginx to apply the new configuration
-sudo systemctl reload nginx
+sudo service nginx restart
