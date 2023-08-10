@@ -42,12 +42,12 @@ frontend http
         default_backend web-backend
 
 frontend www-https
-        bind *:443 ssl crt /etc/haproxy/ssl/www.luisch.tech.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.binini11.tech/fullchain.pem
         http-request set-header X-Forwarded-Proto https
         default_backend web-backend
 
 backend web-backend
         balance roundrobin
         redirect scheme https if !{ ssl_fc }
-        server web-01 35.168.2.123:80 check
-        server web-02 35.153.226.75:80 check
+        server web-01 54.173.116.224:80 check
+        server web-02 54.175.17.125:80 check
