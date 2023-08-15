@@ -1,0 +1,15 @@
+
+defaults
+  mode http
+  timeout client 15s
+  timeout connect 10s
+  timeout server 15s
+  timeout http-request 10s
+frontend binini11-tech-frontend
+    bind *:80
+    default_backend clickviral-tech-backend
+backend binini11-tech-backend
+    balance roundrobin
+    server 118858-web-01 54.173.116.224:80 check
+    server 118858-web-02 54.175.17.125:80 check
+
