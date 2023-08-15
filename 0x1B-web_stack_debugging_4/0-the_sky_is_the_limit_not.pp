@@ -1,4 +1,4 @@
-reduce the pressure exerted by  high amount of requests
+# reduce the pressure exerted by  high amount of requests
 
 exec {'replace':
   provider => shell,
